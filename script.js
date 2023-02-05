@@ -1,20 +1,16 @@
 const net = new brain.NeuralNetwork();
-net.train([{
-    input: [0, 0],
-    output: [0]
-},
+const data = [
     {
-        input: [1, 0],
-        output: [1]
+    input: {r:0, g: 0, b: 0},
+    output: [1]
+
     },
     {
-        input: [0, 1],
+        input: {r: 1, g: 1, b: 1},
         output: [0]
     },
-    {
-        input: [1, 1],
-        output: [0]
-    }
-]);
+]
+net.train(data);
 const diagram = document.getElementById('diagram');
-diagram.innerHTML=brain.utilities.toSVG(net);
+diagram.innerHTML = brain.utilities.toSVG(net);
+console.log(net.run({ r: 1, g: 5, b:0 }))

@@ -7,8 +7,30 @@
     <script src="//unpkg.com/brain.js" defer></script>
     <script src="script.js" defer></script>
     <title>Document</title>
+    <style>
+        #color {
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .white {
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
-    <div id="diagram"></div>
+    <div id="color">
+        <div class="white">White Text</div>
+        <div>Black Text</div>
+        <div class="guess">Guess Text</div>
+    </div>
+    <button id="white-button">white</button>
+    <button id="black-button">black</button>
+    <button id="print-button">Print</button>
 </body>
 </html>
